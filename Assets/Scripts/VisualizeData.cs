@@ -238,7 +238,7 @@ public class VisualizeData : MonoBehaviour
             }
 
 
-
+            Debug.Log($"pos xyz {newPos[0]} {newPos[1]}  {newPos[2]}");
 
             dataPoints[i].transform.position = new Vector3(newPos[0], newPos[1], newPos[2]) + holderObj.transform.position;
             dataPoints[i].transform.rotation = newRot;

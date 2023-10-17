@@ -20,13 +20,21 @@ public class ToggleObject : MonoBehaviour
     // Update is called once per frame
     public void Toggle(InputAction.CallbackContext context)
     {
-
         List<string> posNames = transform.GetComponent<VisualizeData>().posNames;
-        List<string> rotNames = transform.GetComponent<VisualizeData>().rotNames;
-        List<string> scaleNames = transform.GetComponent<VisualizeData>().scaleNames;
-        List<string> colorNames = transform.GetComponent<VisualizeData>().colorNames;
+        if (posNames.Count == 3)
+        {
+            
+            List<string> rotNames = transform.GetComponent<VisualizeData>().rotNames;
+            List<string> scaleNames = transform.GetComponent<VisualizeData>().scaleNames;
+            List<string> colorNames = transform.GetComponent<VisualizeData>().colorNames;
 
-        transform.GetComponent<VisualizeData>().spreadPoints(posNames, rotNames, scaleNames, colorNames);
+            transform.GetComponent<VisualizeData>().spreadPoints(posNames, rotNames, scaleNames, colorNames);
+        }
+        else
+        {
+            Debug.Log("Not enough positions");
+        }
+        
 
     }
 }
