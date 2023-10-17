@@ -132,7 +132,7 @@ public class VisualizeData : MonoBehaviour
     }
 
 
-    void spreadPoints(List<string> posNames, List<string> rotNames = null, List<string> scaleNames = null, List<string> colorNames = null)
+    public void spreadPoints(List<string> posNames, List<string> rotNames = null, List<string> scaleNames = null, List<string> colorNames = null)
     {
         float newMinPos = 0.0f;
         float newMaxPos = 1.0f * posScaling;
